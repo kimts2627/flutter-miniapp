@@ -53,7 +53,7 @@ class Layout extends StatelessWidget {
                     ],
                   )
                 ),
-                Icon(Icons.wifi_outlined, color: Colors.red,),
+                Icon(Icons.star, color: Colors.red,),
                 Text('01'),
               ],
             ),
@@ -89,7 +89,19 @@ class Layout extends StatelessWidget {
                 ],
               )
             ],
-          )
+          ),
+
+          // Text section!!!!!!!!!
+          Container(
+            padding: EdgeInsets.all(32),
+            child: Text(
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra,'
+                  ' turpis tincidunt ornare congue, quam ligula volutpat est,'
+                  ' a fermentum nulla elit placerat ex. Sed magna est, laoreet ac'
+                  ' sagittis efficitur, vehicula in lorem. Etiam mattis mi a dolor'
+                  ' posuere congue. Praesent at porttitor massa, rutrum volutpat dolor.'
+            ),
+          ),
         ],
       ),
     );
