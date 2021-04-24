@@ -27,12 +27,16 @@ class Layout extends StatelessWidget {
       ),
       body: ListView(
         children: [
+
+          // Image section!!!!!!!!!!!
           Image.network(
             'https://picsum.photos/400/600',
             height: 240,
             width: 600,
             fit: BoxFit.cover,
           ),
+
+          // Title section!!!!!!!!!!
           Container(
             child: Row(
               children: [
@@ -54,6 +58,37 @@ class Layout extends StatelessWidget {
               ],
             ),
             padding: EdgeInsets.all(32),
+          ),
+
+          // Button section!!!!!!!!!!
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  Icon(Icons.call, color: Colors.blue),
+                  Text('Call', style: TextStyle(
+                    color: Colors.blue)
+                  )
+                ],
+              ),
+              Column(
+                children: [
+                  Icon(Icons.near_me, color: Colors.blue),
+                  Text('Route', style: TextStyle(
+                      color: Colors.blue)
+                  )
+                ],
+              ),
+              Column(
+                children: [
+                  Icon(Icons.share, color: Colors.blue),
+                  Text('Share', style: TextStyle(
+                      color: Colors.blue)
+                  )
+                ],
+              )
+            ],
           )
         ],
       ),
