@@ -32,6 +32,28 @@ class Layout extends StatelessWidget {
             height: 240,
             width: 600,
             fit: BoxFit.cover,
+          ),
+          Container(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Random Picture', style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),),
+                      Text('Picture from Lorem Picsum!', style: TextStyle(
+                        color: Colors.grey[500],
+                      ))
+                    ],
+                  )
+                ),
+                Icon(Icons.wifi_outlined, color: Colors.red,),
+                Text('01'),
+              ],
+            ),
+            padding: EdgeInsets.all(32),
           )
         ],
       ),
