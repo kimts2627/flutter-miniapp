@@ -18,7 +18,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Layout extends StatelessWidget {
+class Layout extends StatefulWidget {
+  @override
+  _LayoutState createState() => _LayoutState();
+}
+
+class _LayoutState extends State<Layout> {
+
+  bool star = false;
+  int count = 41;
+
   @override
   Widget build(BuildContext context) {
     Widget imageSection = Image.network(
@@ -44,8 +53,22 @@ class Layout extends StatelessWidget {
                 ],
               )
           ),
-          Icon(Icons.star, color: Colors.red,),
-          Text('01'),
+          IconButton(
+            icon: star ? Icon(Icons.star) : Icon(Icons.star_border),
+            color: Colors.red,
+            onPressed: (){
+              setState(() {
+                if(star) {
+                  count -= 1;
+                  star = !star;
+                } else {
+                  count += 1;
+                  star = !star;
+                }
+              });
+            },
+          ),
+          Text('$count'),
         ],
       ),
       padding: EdgeInsets.all(32),
@@ -108,3 +131,4 @@ class Layout extends StatelessWidget {
     );
   }
 }
+
